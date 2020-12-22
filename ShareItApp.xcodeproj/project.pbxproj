@@ -14,6 +14,7 @@
 		21D939D925929DDA008D807E /* ShareItApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 21D939D725929DDA008D807E /* ShareItApp.xcdatamodeld */; };
 		21D939DB25929DDE008D807E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21D939DA25929DDE008D807E /* Assets.xcassets */; };
 		21D939DE25929DDE008D807E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21D939DC25929DDE008D807E /* LaunchScreen.storyboard */; };
+		9AD3C698609BF33F278A056E /* Pods_ShareItApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38D6B041FD1487E607FA0D3E /* Pods_ShareItApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,9 @@
 		21D939DA25929DDE008D807E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21D939DD25929DDE008D807E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21D939DF25929DDE008D807E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		38D6B041FD1487E607FA0D3E /* Pods_ShareItApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareItApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42D949BF169B4E5E842717FF /* Pods-ShareItApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareItApp.debug.xcconfig"; path = "Target Support Files/Pods-ShareItApp/Pods-ShareItApp.debug.xcconfig"; sourceTree = "<group>"; };
+		98D97C70930245034035D8EC /* Pods-ShareItApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareItApp.release.xcconfig"; path = "Target Support Files/Pods-ShareItApp/Pods-ShareItApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AD3C698609BF33F278A056E /* Pods_ShareItApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +49,8 @@
 			children = (
 				21D939CD25929DDA008D807E /* ShareItApp */,
 				21D939CC25929DDA008D807E /* Products */,
+				6AAF4D625E817F500F4E5C49 /* Pods */,
+				9C4ACD0341C2FD3391E58114 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +77,24 @@
 			path = ShareItApp;
 			sourceTree = "<group>";
 		};
+		6AAF4D625E817F500F4E5C49 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42D949BF169B4E5E842717FF /* Pods-ShareItApp.debug.xcconfig */,
+				98D97C70930245034035D8EC /* Pods-ShareItApp.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9C4ACD0341C2FD3391E58114 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38D6B041FD1487E607FA0D3E /* Pods_ShareItApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21D939E225929DDE008D807E /* Build configuration list for PBXNativeTarget "ShareItApp" */;
 			buildPhases = (
+				31E4B4F1F30F1C60E6709B5F /* [CP] Check Pods Manifest.lock */,
 				21D939C725929DDA008D807E /* Sources */,
 				21D939C825929DDA008D807E /* Frameworks */,
 				21D939C925929DDA008D807E /* Resources */,
+				262E7619BA303AA210AD6726 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -134,6 +161,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		262E7619BA303AA210AD6726 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShareItApp/Pods-ShareItApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShareItApp/Pods-ShareItApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShareItApp/Pods-ShareItApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31E4B4F1F30F1C60E6709B5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ShareItApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		21D939C725929DDA008D807E /* Sources */ = {
@@ -287,6 +356,7 @@
 		};
 		21D939E325929DDE008D807E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42D949BF169B4E5E842717FF /* Pods-ShareItApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +376,7 @@
 		};
 		21D939E425929DDE008D807E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 98D97C70930245034035D8EC /* Pods-ShareItApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
