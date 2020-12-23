@@ -7,8 +7,6 @@ target 'ShareItApp' do
 
   # Pods for ShareItApp
 
-pod 'Firebase/Core'
-
 pod 'Firebase/Firestore'
 
 end
