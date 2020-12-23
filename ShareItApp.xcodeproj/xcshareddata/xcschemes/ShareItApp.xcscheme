@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "87803597EB3F20FC46472B85392EC4FD"
-               BuildableName = "FirebaseInstallations.framework"
-               BlueprintName = "FirebaseInstallations"
-               ReferencedContainer = "container:Pods.xcodeproj">
+               BlueprintIdentifier = "21D939CA25929DDA008D807E"
+               BuildableName = "ShareItApp.app"
+               BlueprintName = "ShareItApp"
+               ReferencedContainer = "container:ShareItApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -40,6 +40,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "21D939CA25929DDA008D807E"
+            BuildableName = "ShareItApp.app"
+            BlueprintName = "ShareItApp"
+            ReferencedContainer = "container:ShareItApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"
@@ -47,6 +57,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "21D939CA25929DDA008D807E"
+            BuildableName = "ShareItApp.app"
+            BlueprintName = "ShareItApp"
+            ReferencedContainer = "container:ShareItApp.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
