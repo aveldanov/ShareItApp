@@ -42,13 +42,18 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     
     
     @IBAction func postButtonClicked(_ sender: UIButton) {
+        guard let userName = userNameTextField.text else {
+            return
+        }
+        
+        
         Firestore.firestore().collection("posts").addDocument(data: [
-            "category":selectedCategory,
-            "numberOfLikes":0,
-            "numberOfComments":0,
-            "posttext":postTextView.text,
-            "timeStamp": FieldValue.serverTimestamp(),
-            "userName": userNameTextField.text!
+            CATEGORY: selectedCategory,
+            NUM_LIKES: 0,
+            NUM_COMMENTS: 0,
+            POST_TEXT: postTextView.text,
+            TIME_STAMP: FieldValue.serverTimestamp(),
+            USERNAME: userName
         ]) { (error) in
             if let error = error{
                 debugPrint("Error adding document:", error)
