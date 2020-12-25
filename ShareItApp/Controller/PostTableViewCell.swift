@@ -24,7 +24,10 @@ class PostTableViewCell: UITableViewCell {
     
     
     func configureCell(post: Post){
-        
+        userNameLabel.text = post.userName
+//        timeStampLabel.text = String(post.timeStamp)
+        postTextLabel.text = post.postText
+        likesNumberLabel.text = String(post.numberOfLikes)
         
         
         

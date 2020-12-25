@@ -96,7 +96,7 @@
                                                 <constraint firstItem="pWn-A2-B6r" firstAttribute="top" secondItem="0v9-gv-kBR" secondAttribute="bottom" constant="10" id="mk3-sE-d0n"/>
                                             </constraints>
                                         </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.80561977620000003" green="0.47773921489999999" blue="0.21560397740000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="likesImage" destination="hmC-2e-8j2" id="mfA-Ex-Ocn"/>
                                             <outlet property="likesNumberLabel" destination="lKU-0C-zFW" id="87X-w7-pym"/>

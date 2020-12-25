@@ -7,7 +7,7 @@
 
 import Foundation
 
-let POSTS_COLLECTION = "posts"
+let POSTS_COLLECTION_REF = "posts"
 let CATEGORY = "category"
 let NUM_COMMENTS = "numberOfComments"
 let NUM_LIKES = "numberOfLikes"
