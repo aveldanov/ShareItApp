@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AddPostViewController: UIViewController, UITextViewDelegate {
 //MARK: - Outlets
@@ -15,6 +16,11 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var postTextView: UITextView!
     @IBOutlet weak var postButton: UIButton!
+    
+    
+    //MARK: - Variables
+    private var selectedCategory = "funny"
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +42,14 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     
     
     @IBAction func postButtonClicked(_ sender: UIButton) {
+        Firestore.firestore().collection("posts").addDocument(data: ["":""]) { (error) in
+            if let error = error{
+                debugPrint("Error adding document:", error)
+            }else{
+                // go to prev view controller in a stack
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
     
     @IBAction func CategoryChanged(_ sender: UISegmentedControl) {
