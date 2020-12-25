@@ -47,7 +47,7 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
         }
         
         
-        Firestore.firestore().collection("posts").addDocument(data: [
+        Firestore.firestore().collection(POSTS_COLLECTION).addDocument(data: [
             CATEGORY: selectedCategory,
             NUM_LIKES: 0,
             NUM_COMMENTS: 0,
