@@ -31,10 +31,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Post View Controller-->
         <scene sceneID="i80-GG-lbL">
             <objects>
-                <viewController id="US3-WS-Xol" sceneMemberID="viewController">
+                <viewController id="US3-WS-Xol" customClass="AddPostViewController" customModule="ShareItApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iYz-PD-qTR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -52,6 +52,9 @@
                                 </segments>
                                 <color key="tintColor" red="0.99215686270000003" green="0.35294117650000001" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="selectedSegmentTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="CategoryChanged:" destination="US3-WS-Xol" eventType="valueChanged" id="p5g-mh-jnb"/>
+                                </connections>
                             </segmentedControl>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="User name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QCk-sM-wZN">
                                 <rect key="frame" x="20" y="168" width="374" height="22"/>
@@ -80,6 +83,9 @@
                                 <state key="normal" title="Post">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="postButtonClicked:" destination="US3-WS-Xol" eventType="touchUpInside" id="39b-ad-dk5"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="B7p-lb-SbJ"/>
@@ -99,6 +105,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JWq-VL-zwX"/>
+                    <connections>
+                        <outlet property="categorySegment" destination="heK-KD-7U3" id="ISx-QD-0Eh"/>
+                        <outlet property="postButton" destination="yx4-Ut-TU7" id="cdE-Y1-5SE"/>
+                        <outlet property="postTextView" destination="Oci-C7-8En" id="qhB-SP-qEz"/>
+                        <outlet property="userNameTextField" destination="QCk-sM-wZN" id="m1N-zF-4go"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbE-FU-bjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

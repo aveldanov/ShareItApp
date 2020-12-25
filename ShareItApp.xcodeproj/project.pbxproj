@@ -48,6 +48,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		211D086B259437CB00B2805F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21D939D225929DDA008D807E /* MainViewController.swift */,
+				211D0868259437B400B2805F /* AddPostViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		211D086C259437D600B2805F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21D939D425929DDA008D807E /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		211D086D259437E300B2805F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		21D939C225929DDA008D807E = {
 			isa = PBXGroup;
 			children = (
@@ -69,16 +93,16 @@
 		21D939CD25929DDA008D807E /* ShareItApp */ = {
 			isa = PBXGroup;
 			children = (
+				211D086D259437E300B2805F /* Model */,
+				211D086C259437D600B2805F /* View */,
+				211D086B259437CB00B2805F /* Controller */,
 				211D0863259335ED00B2805F /* GoogleService-Info.plist */,
 				21D939CE25929DDA008D807E /* AppDelegate.swift */,
 				21D939D025929DDA008D807E /* SceneDelegate.swift */,
-				21D939D225929DDA008D807E /* MainViewController.swift */,
-				21D939D425929DDA008D807E /* Main.storyboard */,
 				21D939DA25929DDE008D807E /* Assets.xcassets */,
 				21D939DC25929DDE008D807E /* LaunchScreen.storyboard */,
 				21D939DF25929DDE008D807E /* Info.plist */,
 				21D939D725929DDA008D807E /* ShareItApp.xcdatamodeld */,
-				211D0868259437B400B2805F /* AddPostViewController.swift */,
 			);
 			path = ShareItApp;
 			sourceTree = "<group>";
