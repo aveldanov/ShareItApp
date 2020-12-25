@@ -29,6 +29,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     private var posts = [Post]()
     private var postCollectionRef: CollectionReference! // reference to a database name
+    private var postListener: ListenerRegistration!
     
     
     
@@ -44,7 +45,9 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     override func viewWillAppear(_ animated: Bool) {
-        postCollectionRef.getDocuments { [self] (snapshot, error) in
+//         listener for changes in DB
+       postListener = postCollectionRef.addSnapshotListener { (snapshot, error) in
+            self.posts.removeAll()
             if let error = error{
                debugPrint("Error fetching posts", error)
             }else{
@@ -59,14 +62,20 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     let numOfLikes = data[NUM_LIKES] as? Int ?? 0
                     let numOfComments = data[NUM_COMMENTS] as? Int ?? 0
                     let documentID = document.documentID
-                    
+
                     let post = Post(userName: userName, timeStamp: timeStamp, postText: postText, numberOfLikes: numOfLikes, numberOfComments: numOfComments, documentID: documentID)
-                    
+
                     self.posts.append(post)
                 }
-                tableView.reloadData()
+                self.tableView.reloadData()
             }
         }
+    }
+    
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        // free up resources
+        postListener.remove()
     }
     
     
