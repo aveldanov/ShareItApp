@@ -10,6 +10,7 @@
 		211D0864259335ED00B2805F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 211D0863259335ED00B2805F /* GoogleService-Info.plist */; };
 		211D0869259437B400B2805F /* AddPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D0868259437B400B2805F /* AddPostViewController.swift */; };
 		211D087125958BAF00B2805F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D087025958BAF00B2805F /* Constants.swift */; };
+		211D08752595AF7800B2805F /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D08742595AF7800B2805F /* Post.swift */; };
 		21D939CF25929DDA008D807E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D939CE25929DDA008D807E /* AppDelegate.swift */; };
 		21D939D125929DDA008D807E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D939D025929DDA008D807E /* SceneDelegate.swift */; };
 		21D939D325929DDA008D807E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D939D225929DDA008D807E /* MainViewController.swift */; };
@@ -24,6 +25,7 @@
 		211D0863259335ED00B2805F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		211D0868259437B400B2805F /* AddPostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPostViewController.swift; sourceTree = "<group>"; };
 		211D087025958BAF00B2805F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		211D08742595AF7800B2805F /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		21D939CB25929DDA008D807E /* ShareItApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareItApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D939CE25929DDA008D807E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21D939D025929DDA008D807E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 		211D086D259437E300B2805F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				211D08742595AF7800B2805F /* Post.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 				21D939D325929DDA008D807E /* MainViewController.swift in Sources */,
 				21D939CF25929DDA008D807E /* AppDelegate.swift in Sources */,
 				21D939D125929DDA008D807E /* SceneDelegate.swift in Sources */,
+				211D08752595AF7800B2805F /* Post.swift in Sources */,
 				211D087125958BAF00B2805F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
