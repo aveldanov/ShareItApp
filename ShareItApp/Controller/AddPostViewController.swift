@@ -12,10 +12,10 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     //MARK: - Outlets
     
     
-    @IBOutlet weak var categorySegment: UISegmentedControl!
-    @IBOutlet weak var userNameTextField: UITextField!
-    @IBOutlet weak var postTextView: UITextView!
-    @IBOutlet weak var postButton: UIButton!
+    @IBOutlet private weak var categorySegment: UISegmentedControl!
+    @IBOutlet private weak var userNameTextField: UITextField!
+    @IBOutlet private weak var postTextView: UITextView!
+    @IBOutlet private weak var postButton: UIButton!
     
     
     //MARK: - Variables

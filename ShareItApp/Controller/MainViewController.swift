@@ -20,9 +20,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 //MARK: - Outlets
     
     
-    @IBOutlet weak var segmentControl: UISegmentedControl!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var segmentControl: UISegmentedControl!
+    @IBOutlet private weak var tableView: UITableView!
     
+    
+    //MARK: - Variables
+    
+    private var posts = [Post]()
     
     
     
@@ -35,11 +39,15 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+        return posts.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell
+        
+        
+        
+        
+        return UITableViewCell()
     }
 
 }
