@@ -20,7 +20,7 @@ class PostTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        let tap = UIGestureRecognizer(target: self, action: #selector(<#T##@objc method#>))
+        let tap = UIGestureRecognizer(target: self, action: #selector(likeTapped))
     }
     
     func likeTapped(){
