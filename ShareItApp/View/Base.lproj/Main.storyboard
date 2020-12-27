@@ -223,10 +223,10 @@
             </objects>
             <point key="canvasLocation" x="1951" y="94"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="zbI-Qg-PLm">
             <objects>
-                <viewController id="hFu-j4-3uo" sceneMemberID="viewController">
+                <viewController id="hFu-j4-3uo" customClass="LoginViewController" customModule="ShareItApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="WEw-qc-WLt">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
