@@ -31,8 +31,7 @@ class PostTableViewCell: UITableViewCell {
         
 //        print("TIMESTAMP",post.timeStamp)
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM d, HH:mm"
-
+        formatter.dateFormat = "MMM d, hh:mm"
         let timeStamp = formatter.string(from: post.timeStamp)
         timeStampLabel.text = timeStamp
     }

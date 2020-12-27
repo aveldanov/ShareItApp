@@ -46,32 +46,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
 
     }
     override func viewWillAppear(_ animated: Bool) {
-//         listener for changes in DB
-       postListener = postCollectionRef.addSnapshotListener { (snapshot, error) in
-            self.posts.removeAll()
-            if let error = error{
-               debugPrint("Error fetching posts", error)
-            }else{
-                guard let snapshot = snapshot else {
-                    return
-                }
-                for document in snapshot.documents{
-                    let data = document.data()
-                    let userName = data[USERNAME] as? String ?? "Anonymous"
-                    let timeStamp = data[TIME_STAMP] as? Date ?? Date()
-                    let postText = data[POST_TEXT] as? String ?? ""
-                    let numOfLikes = data[NUM_LIKES] as? Int ?? 0
-                    let numOfComments = data[NUM_COMMENTS] as? Int ?? 0
-                    let documentID = document.documentID
-                    let date = timeStamp.
-                    let post = Post(userName: userName, timeStamp: timeStamp, postText: postText, numberOfLikes: numOfLikes, numberOfComments: numOfComments, documentID: documentID)
-                    
-                    print("BOOM", data[TIME_STAMP])
-                    self.posts.append(post)
-                }
-                self.tableView.reloadData()
-            }
-        }
+        setListener()
     }
     
     
@@ -121,7 +96,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func setListener(){
-        postListener = postCollectionRef.whereField(CATEGORY, isEqualTo: selectedCategory).addSnapshotListener { (snapshot, error) in
+        postListener = postCollectionRef
+            .whereField(CATEGORY, isEqualTo: selectedCategory)
+            .order(by: TIME_STAMP, descending: true)
+            .addSnapshotListener { (snapshot, error) in
              self.posts.removeAll()
              if let error = error{
                 debugPrint("Error fetching posts", error)
@@ -132,7 +110,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                  for document in snapshot.documents{
                      let data = document.data()
                      let userName = data[USERNAME] as? String ?? "Anonymous"
-                     let timeStamp = data[TIME_STAMP] as? Date ?? Date()
+                     let timeStampFB = data[TIME_STAMP] as? Timestamp ?? Timestamp()
+                     let timeStamp = timeStampFB.dateValue()
                      let postText = data[POST_TEXT] as? String ?? ""
                      let numOfLikes = data[NUM_LIKES] as? Int ?? 0
                      let numOfComments = data[NUM_COMMENTS] as? Int ?? 0
