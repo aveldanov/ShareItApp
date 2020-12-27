@@ -14,15 +14,16 @@ class CreateUserViewController: UIViewController {
     @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var createUserButton: UIButton!
-    
     @IBOutlet weak var cancelButton: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        createUserButton.layer.cornerRadius = 10
+        cancelButton.layer.cornerRadius = 10
 
     }
     
