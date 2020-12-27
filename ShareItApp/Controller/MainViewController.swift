@@ -30,6 +30,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private var posts = [Post]()
     private var postCollectionRef: CollectionReference! // reference to a database name
     private var postListener: ListenerRegistration!
+    private var selectedCategory = PostCategory.funny.rawValue
     
     
     
@@ -62,9 +63,10 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                     let numOfLikes = data[NUM_LIKES] as? Int ?? 0
                     let numOfComments = data[NUM_COMMENTS] as? Int ?? 0
                     let documentID = document.documentID
-
+                    let date = timeStamp.
                     let post = Post(userName: userName, timeStamp: timeStamp, postText: postText, numberOfLikes: numOfLikes, numberOfComments: numOfComments, documentID: documentID)
-
+                    
+                    print("BOOM", data[TIME_STAMP])
                     self.posts.append(post)
                 }
                 self.tableView.reloadData()
@@ -88,6 +90,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as?  PostTableViewCell{
             
             cell.configureCell(post: posts[indexPath.row])
+//            print(posts[indexPath.row].timeStamp)
+            
             return cell
 
         }else{
@@ -96,6 +100,55 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         
     }
+    
+    
+    
+    @IBAction func categoryChangeTapped(_ sender: UISegmentedControl) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            selectedCategory = PostCategory.funny.rawValue
+        case 1:
+            selectedCategory = PostCategory.serious.rawValue
+        case 2:
+            selectedCategory = PostCategory.crazy.rawValue
+        default:
+            selectedCategory = PostCategory.popular.rawValue
+        }
+        // remove post listner and add filter listener
+        postListener.remove()
+        setListener()
+        
+    }
+    
+    func setListener(){
+        postListener = postCollectionRef.whereField(CATEGORY, isEqualTo: selectedCategory).addSnapshotListener { (snapshot, error) in
+             self.posts.removeAll()
+             if let error = error{
+                debugPrint("Error fetching posts", error)
+             }else{
+                 guard let snapshot = snapshot else {
+                     return
+                 }
+                 for document in snapshot.documents{
+                     let data = document.data()
+                     let userName = data[USERNAME] as? String ?? "Anonymous"
+                     let timeStamp = data[TIME_STAMP] as? Date ?? Date()
+                     let postText = data[POST_TEXT] as? String ?? ""
+                     let numOfLikes = data[NUM_LIKES] as? Int ?? 0
+                     let numOfComments = data[NUM_COMMENTS] as? Int ?? 0
+                     let documentID = document.documentID
+
+                     let post = Post(userName: userName, timeStamp: timeStamp, postText: postText, numberOfLikes: numOfLikes, numberOfComments: numOfComments, documentID: documentID)
+
+                     self.posts.append(post)
+                 }
+                 self.tableView.reloadData()
+             }
+         }
+
+        
+    }
+    
 
 }
 

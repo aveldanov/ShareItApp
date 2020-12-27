@@ -29,9 +29,12 @@ class PostTableViewCell: UITableViewCell {
         postTextLabel.text = post.postText
         likesNumberLabel.text = String(post.numberOfLikes)
         
-        
-        
-        
+//        print("TIMESTAMP",post.timeStamp)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d, HH:mm"
+
+        let timeStamp = formatter.string(from: post.timeStamp)
+        timeStampLabel.text = timeStamp
     }
 
 

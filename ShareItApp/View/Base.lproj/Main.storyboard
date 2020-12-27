@@ -32,6 +32,7 @@
                                 <color key="selectedSegmentTintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <connections>
                                     <action selector="CategoryChanged:" destination="US3-WS-Xol" eventType="valueChanged" id="5ZA-aV-GqQ"/>
+                                    <action selector="categoryChangeTapped:" destination="BYZ-38-t0r" eventType="valueChanged" id="2w9-Wi-W8j"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NWl-k9-Moe">
