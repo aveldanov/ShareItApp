@@ -1,5 +1,5 @@
 //
-//  LoginViewController.swift
+//  CreateUserViewController.swift
 //  ShareItApp
 //
 //  Created by Veldanov, Anton on 12/26/20.
@@ -7,29 +7,31 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
-    
+class CreateUserViewController: UIViewController {
+
     //MARK: - Outlets
+    
+    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    
     @IBOutlet weak var createUserButton: UIButton!
     
+    @IBOutlet weak var cancelButton: UIButton!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginButton.layer.cornerRadius = 10
-        createUserButton.layer.cornerRadius = 10
-        
+
     }
+    
+    
+    @IBAction func createButtonTapped(_ sender: UIButton) {
+    }
+    @IBAction func cancelButtonTapped(_ sender: UIButton) {
+    }
+    
     
 
-    @IBAction func loginButtonTapped(_ sender: UIButton) {
-    }
-    @IBAction func createUserButtonTapped(_ sender: UIButton) {
-    }
-    
-    
 }
