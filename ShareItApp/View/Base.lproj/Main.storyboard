@@ -299,6 +299,12 @@
                             <constraint firstItem="LQF-9D-c5g" firstAttribute="top" secondItem="gMY-4w-IZG" secondAttribute="bottom" constant="20" id="ynb-hf-wI8"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="createUserButton" destination="egN-f7-AQI" id="Tjy-gd-pmC"/>
+                        <outlet property="emailTextField" destination="gMY-4w-IZG" id="vhk-HB-iiS"/>
+                        <outlet property="loginButton" destination="ZRu-NR-D1u" id="LEw-FD-Ere"/>
+                        <outlet property="passwordTextField" destination="LQF-9D-c5g" id="VoS-3X-haY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v0F-NZ-1Mw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
