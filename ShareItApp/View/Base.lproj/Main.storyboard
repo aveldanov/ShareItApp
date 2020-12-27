@@ -223,6 +223,87 @@
             </objects>
             <point key="canvasLocation" x="1951" y="94"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zbI-Qg-PLm">
+            <objects>
+                <viewController id="hFu-j4-3uo" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WEw-qc-WLt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gMY-4w-IZG">
+                                <rect key="frame" x="20" y="64" width="374" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="UYN-7y-pMw"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LQF-9D-c5g">
+                                <rect key="frame" x="20" y="124" width="374" height="40"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.14999999999999999" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="ReQ-Xq-ZgJ"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZRu-NR-D1u">
+                                <rect key="frame" x="132" y="184" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="SOu-E6-aX1"/>
+                                    <constraint firstAttribute="width" constant="150" id="Y4o-Yk-I7Q"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dont have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g5s-Vc-vd5">
+                                <rect key="frame" x="134" y="264" width="146" height="20"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="egN-f7-AQI">
+                                <rect key="frame" x="132" y="304" width="150" height="40"/>
+                                <color key="backgroundColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="LhC-fj-px3"/>
+                                    <constraint firstAttribute="width" constant="150" id="aB8-Cz-fbj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Create User">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Ksg-OK-LuF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ksg-OK-LuF" firstAttribute="trailing" secondItem="LQF-9D-c5g" secondAttribute="trailing" constant="20" id="35s-2A-uaL"/>
+                            <constraint firstItem="gMY-4w-IZG" firstAttribute="leading" secondItem="Ksg-OK-LuF" secondAttribute="leading" constant="20" id="FvX-u7-ygU"/>
+                            <constraint firstItem="ZRu-NR-D1u" firstAttribute="top" secondItem="LQF-9D-c5g" secondAttribute="bottom" constant="20" id="HD3-a3-X8o"/>
+                            <constraint firstItem="egN-f7-AQI" firstAttribute="top" secondItem="g5s-Vc-vd5" secondAttribute="bottom" constant="20" id="HWr-Er-1XF"/>
+                            <constraint firstItem="LQF-9D-c5g" firstAttribute="leading" secondItem="Ksg-OK-LuF" secondAttribute="leading" constant="20" id="Nwg-eQ-G8x"/>
+                            <constraint firstItem="Ksg-OK-LuF" firstAttribute="trailing" secondItem="gMY-4w-IZG" secondAttribute="trailing" constant="20" id="RoO-6I-Ait"/>
+                            <constraint firstItem="ZRu-NR-D1u" firstAttribute="centerX" secondItem="WEw-qc-WLt" secondAttribute="centerX" id="Tqv-Rd-iI6"/>
+                            <constraint firstItem="gMY-4w-IZG" firstAttribute="top" secondItem="Ksg-OK-LuF" secondAttribute="top" constant="20" id="VlQ-aG-6I0"/>
+                            <constraint firstItem="g5s-Vc-vd5" firstAttribute="centerX" secondItem="WEw-qc-WLt" secondAttribute="centerX" id="X5P-of-s8r"/>
+                            <constraint firstItem="g5s-Vc-vd5" firstAttribute="top" secondItem="ZRu-NR-D1u" secondAttribute="bottom" constant="40" id="gmM-xz-nTr"/>
+                            <constraint firstItem="egN-f7-AQI" firstAttribute="centerX" secondItem="WEw-qc-WLt" secondAttribute="centerX" id="uSE-Cb-hx3"/>
+                            <constraint firstItem="LQF-9D-c5g" firstAttribute="top" secondItem="gMY-4w-IZG" secondAttribute="bottom" constant="20" id="ynb-hf-wI8"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v0F-NZ-1Mw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127" y="-585"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="ahw-fg-ZTQ">
             <objects>
