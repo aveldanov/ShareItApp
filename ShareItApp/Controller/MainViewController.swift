@@ -61,19 +61,13 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         if let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as?  PostTableViewCell{
-            
             cell.configureCell(post: posts[indexPath.row])
             //            print(posts[indexPath.row].timeStamp)
-            
             return cell
-            
         }else{
             return UITableViewCell()
         }
-        
-        
     }
     
     
@@ -92,7 +86,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // remove post listner and add filter listener
         postListener.remove()
         setListener()
-        
     }
     
     func setListener(){
@@ -101,57 +94,24 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             postListener = postCollectionRef
                 .order(by: NUM_LIKES, descending: true)
                 .addSnapshotListener { (snapshot, error) in
-                    self.posts.removeAll()
                     if let error = error{
                         debugPrint("Error fetching posts", error)
                     }else{
-                        guard let snapshot = snapshot else {
-                            return
-                        }
-                        for document in snapshot.documents{
-                            let data = document.data()
-                            let userName = data[USERNAME] as? String ?? "Anonymous"
-                            let timeStampFB = data[TIME_STAMP] as? Timestamp ?? Timestamp()
-                            let timeStamp = timeStampFB.dateValue()
-                            let postText = data[POST_TEXT] as? String ?? ""
-                            let numOfLikes = data[NUM_LIKES] as? Int ?? 0
-                            let numOfComments = data[NUM_COMMENTS] as? Int ?? 0
-                            let documentID = document.documentID
-                            
-                            let post = Post(userName: userName, timeStamp: timeStamp, postText: postText, numberOfLikes: numOfLikes, numberOfComments: numOfComments, documentID: documentID)
-                            
-                            self.posts.append(post)
-                        }
+                        self.posts.removeAll()
+                        self.posts = Post.parseData(snapshot: snapshot)
                         self.tableView.reloadData()
                     }
                 }
-            
         }else{
             postListener = postCollectionRef
                 .whereField(CATEGORY, isEqualTo: selectedCategory)
                 .order(by: TIME_STAMP, descending: true)
                 .addSnapshotListener { (snapshot, error) in
-                    self.posts.removeAll()
                     if let error = error{
                         debugPrint("Error fetching posts", error)
                     }else{
-                        guard let snapshot = snapshot else {
-                            return
-                        }
-                        for document in snapshot.documents{
-                            let data = document.data()
-                            let userName = data[USERNAME] as? String ?? "Anonymous"
-                            let timeStampFB = data[TIME_STAMP] as? Timestamp ?? Timestamp()
-                            let timeStamp = timeStampFB.dateValue()
-                            let postText = data[POST_TEXT] as? String ?? ""
-                            let numOfLikes = data[NUM_LIKES] as? Int ?? 0
-                            let numOfComments = data[NUM_COMMENTS] as? Int ?? 0
-                            let documentID = document.documentID
-                            
-                            let post = Post(userName: userName, timeStamp: timeStamp, postText: postText, numberOfLikes: numOfLikes, numberOfComments: numOfComments, documentID: documentID)
-                            
-                            self.posts.append(post)
-                        }
+                        self.posts.removeAll()
+                        self.posts = Post.parseData(snapshot: snapshot)
                         self.tableView.reloadData()
                     }
                 }
