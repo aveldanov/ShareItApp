@@ -20,7 +20,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     //MARK: - Outlets
     
-    
     @IBOutlet private weak var segmentControl: UISegmentedControl!
     @IBOutlet private weak var tableView: UITableView!
     
@@ -31,9 +30,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private var postCollectionRef: CollectionReference! // reference to a database name
     private var postListener: ListenerRegistration!
     private var selectedCategory = PostCategory.funny.rawValue
-    
-    
-    
     
     
     override func viewDidLoad() {
@@ -115,17 +111,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                         self.tableView.reloadData()
                     }
                 }
-            
-            
-            
         }
-        
-        
-        
-        
-        
     }
-    
-    
 }
 
