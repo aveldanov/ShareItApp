@@ -8,5 +8,6 @@ target 'ShareItApp' do
   # Pods for ShareItApp
 
 pod 'Firebase/Firestore'
+pod 'Firebase/Auth'
 
 end

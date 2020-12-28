@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import FirebaseAuth
+import Firebase
 
 class CreateUserViewController: UIViewController {
 
@@ -29,8 +31,49 @@ class CreateUserViewController: UIViewController {
     
     
     @IBAction func createButtonTapped(_ sender: UIButton) {
+        guard let email = emailTextField.text,
+              let password = passwordTextField.text,
+              let username = usernameTextField.text
+              else {
+            return
+        }
+        
+        
+        
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
+            if let error = error{
+                debugPrint("Error creating user", error.localizedDescription)
+            }
+            
+            let changeRequest = authResult?.user.createProfileChangeRequest()
+            changeRequest?.displayName = username
+            changeRequest?.commitChanges(completion: { (error) in
+                if let error = error{
+                    debugPrint(error.localizedDescription)
+                }
+            })
+            
+            
+            
+            guard let userID = authResult?.user.uid else {
+                return
+            }
+            Firestore.firestore().collection(USERS_COLLECTION_REF).document(userID).setData(
+                [USERNAME : username,
+                 DATE_CREATED: FieldValue.serverTimestamp()]) { (error) in
+                if let error = error {
+                    debugPrint(error.localizedDescription)
+                }else{
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
+
+        
     }
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
+        dismiss(animated: true, completion: nil)
     }
     
     
