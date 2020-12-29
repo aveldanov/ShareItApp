@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 enum PostCategory: String {
     case serious = "serious"
@@ -30,7 +31,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     private var postCollectionRef: CollectionReference! // reference to a database name
     private var postListener: ListenerRegistration!
     private var selectedCategory = PostCategory.funny.rawValue
-    
+    private var handle: AuthStateDidChangeListenerHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,15 +43,34 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
     }
     override func viewWillAppear(_ animated: Bool) {
-        setListener()
+        // tracking user state
+        handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
+            // if not logged in - popup loginVC
+            if user == nil{
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let loginVC = storyboard.instantiateViewController(identifier: "loginVC")
+                loginVC.modalPresentationStyle = .currentContext
+                self.present(loginVC, animated: true, completion: nil)
+            }else{
+                self.setListener()
+
+            }
+        })
     }
     
     
     override func viewWillDisappear(_ animated: Bool) {
         // free up resources
-        postListener.remove()
+        
+        if postListener != nil{
+            postListener.remove()
+
+        }
     }
     
+    
+    
+    //MARK: - Data Source Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return posts.count
@@ -66,23 +86,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+
     
-    
-    @IBAction func categoryChangeTapped(_ sender: UISegmentedControl) {
-        switch segmentControl.selectedSegmentIndex {
-        case 0:
-            selectedCategory = PostCategory.funny.rawValue
-        case 1:
-            selectedCategory = PostCategory.serious.rawValue
-        case 2:
-            selectedCategory = PostCategory.crazy.rawValue
-        default:
-            selectedCategory = PostCategory.popular.rawValue
-        }
-        // remove post listner and add filter listener
-        postListener.remove()
-        setListener()
-    }
     
     func setListener(){
         
@@ -113,5 +118,38 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 }
         }
     }
+    
+    
+    
+    @IBAction func categoryChangeTapped(_ sender: UISegmentedControl) {
+        switch segmentControl.selectedSegmentIndex {
+        case 0:
+            selectedCategory = PostCategory.funny.rawValue
+        case 1:
+            selectedCategory = PostCategory.serious.rawValue
+        case 2:
+            selectedCategory = PostCategory.crazy.rawValue
+        default:
+            selectedCategory = PostCategory.popular.rawValue
+        }
+        // remove post listner and add filter listener
+        postListener.remove()
+        setListener()
+    }
+    
+    @IBAction func logoutButtonPressed(_ sender: UIBarButtonItem) {
+        let fireBaseAuth = Auth.auth()
+        
+        do{
+            try fireBaseAuth.signOut()
+        }catch let signOutError as NSError{
+            
+            debugPrint("Error Signing Out", signOutError)
+        }
+        
+    }
+    
+    
+    
 }
 
