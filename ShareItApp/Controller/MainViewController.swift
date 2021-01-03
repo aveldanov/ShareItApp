@@ -87,8 +87,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
 
-    
-    
     func setListener(){
         
         if selectedCategory == PostCategory.popular.rawValue{
