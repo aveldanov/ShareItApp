@@ -118,7 +118,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
-    
     @IBAction func categoryChangeTapped(_ sender: UISegmentedControl) {
         switch segmentControl.selectedSegmentIndex {
         case 0:
