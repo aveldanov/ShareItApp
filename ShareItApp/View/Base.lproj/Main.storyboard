@@ -152,11 +152,28 @@
                     <connections>
                         <outlet property="segmentControl" destination="Z1V-Db-HZc" id="Vgr-gg-kXv"/>
                         <outlet property="tableView" destination="NWl-k9-Moe" id="fcs-RQ-tT4"/>
+                        <segue destination="tS9-uf-wiI" kind="show" identifier="toComments" id="t4h-IK-B76"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="93.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="abs-EP-zyI">
+            <objects>
+                <viewController id="tS9-uf-wiI" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="W6N-2f-OCq">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="orX-4m-1GR"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="c0c-CJ-dEj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RL2-KC-OJ1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2022" y="571"/>
         </scene>
         <!--Add Post View Controller-->
         <scene sceneID="i80-GG-lbL">
@@ -241,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QbE-FU-bjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1951" y="94"/>
+            <point key="canvasLocation" x="2019" y="-97"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="zbI-Qg-PLm">

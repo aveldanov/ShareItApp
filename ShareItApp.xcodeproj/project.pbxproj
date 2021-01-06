@@ -14,6 +14,7 @@
 		211D08782595B35800B2805F /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D08772595B35800B2805F /* PostTableViewCell.swift */; };
 		211D087D25984CA300B2805F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D087C25984CA300B2805F /* LoginViewController.swift */; };
 		211D08802598645A00B2805F /* CreateUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 211D087F2598645A00B2805F /* CreateUserViewController.swift */; };
+		2120FE1825A586AA0019A0E3 /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2120FE1725A586AA0019A0E3 /* CommentsViewController.swift */; };
 		21D939CF25929DDA008D807E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D939CE25929DDA008D807E /* AppDelegate.swift */; };
 		21D939D125929DDA008D807E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D939D025929DDA008D807E /* SceneDelegate.swift */; };
 		21D939D325929DDA008D807E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21D939D225929DDA008D807E /* MainViewController.swift */; };
@@ -32,6 +33,7 @@
 		211D08772595B35800B2805F /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
 		211D087C25984CA300B2805F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		211D087F2598645A00B2805F /* CreateUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUserViewController.swift; sourceTree = "<group>"; };
+		2120FE1725A586AA0019A0E3 /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		21D939CB25929DDA008D807E /* ShareItApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShareItApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21D939CE25929DDA008D807E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		21D939D025929DDA008D807E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				211D08772595B35800B2805F /* PostTableViewCell.swift */,
 				211D087C25984CA300B2805F /* LoginViewController.swift */,
 				211D087F2598645A00B2805F /* CreateUserViewController.swift */,
+				2120FE1725A586AA0019A0E3 /* CommentsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -264,6 +267,7 @@
 			files = (
 				211D087D25984CA300B2805F /* LoginViewController.swift in Sources */,
 				211D08802598645A00B2805F /* CreateUserViewController.swift in Sources */,
+				2120FE1825A586AA0019A0E3 /* CommentsViewController.swift in Sources */,
 				21D939D925929DDA008D807E /* ShareItApp.xcdatamodeld in Sources */,
 				211D0869259437B400B2805F /* AddPostViewController.swift in Sources */,
 				21D939D325929DDA008D807E /* MainViewController.swift in Sources */,
