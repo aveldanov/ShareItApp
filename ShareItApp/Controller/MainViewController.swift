@@ -88,7 +88,17 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         performSegue(withIdentifier: "toComments", sender: posts[indexPath.row])
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toComments"{
+            if let destinationVC = segue.destination as? CommentsViewController{
+                if let post = sender as? Post{
+                    
+                    destinationVC.post = post
+                }
+                
+            }
+        }
+    }
     
     
     
