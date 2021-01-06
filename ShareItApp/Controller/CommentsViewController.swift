@@ -15,11 +15,25 @@ class CommentsViewController: UIViewController {
     //MARK: - Outlets
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var addCommentText: UITextField!
+    
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
+    
+    
+    
+    @IBAction func addCommentButtonTapped(_ sender: UIButton) {
+        
+        
+        
+    }
+    
 
 
 }
