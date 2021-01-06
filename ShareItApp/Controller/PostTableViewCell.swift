@@ -16,6 +16,9 @@ class PostTableViewCell: UITableViewCell {
     @IBOutlet weak var postTextLabel: UILabel!
     @IBOutlet weak var likesImage: UIImageView!
     @IBOutlet weak var likesNumberLabel: UILabel!
+    @IBOutlet weak var commentsNumberLabel: UILabel!
+    
+    
     
     //MARK: - Variables
     private var post: Post!
@@ -50,6 +53,9 @@ class PostTableViewCell: UITableViewCell {
         //        timeStampLabel.text = String(post.timeStamp)
         postTextLabel.text = post.postText
         likesNumberLabel.text = String(post.numberOfLikes)
+        commentsNumberLabel.text = String(post.numberOfComments)
+        
+        
         
         //        print("TIMESTAMP",post.timeStamp)
         let formatter = DateFormatter()
