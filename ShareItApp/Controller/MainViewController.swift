@@ -49,7 +49,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
             if user == nil{
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let loginVC = storyboard.instantiateViewController(identifier: "loginVC")
-                loginVC.modalPresentationStyle = .currentContext
+                loginVC.modalPresentationStyle = .currentContext // full screen size
                 self.present(loginVC, animated: true, completion: nil)
             }else{
                 self.setListener()
