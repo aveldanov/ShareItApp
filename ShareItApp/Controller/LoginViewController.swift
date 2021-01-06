@@ -23,7 +23,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 10
         createUserButton.layer.cornerRadius = 10
-        
     }
     
 
