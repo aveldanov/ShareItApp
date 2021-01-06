@@ -12,6 +12,9 @@ class CommentsViewController: UIViewController {
     
     var post: Post!
     
+    //MARK: - Outlets
+    
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
