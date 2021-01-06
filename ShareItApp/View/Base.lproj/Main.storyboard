@@ -159,10 +159,10 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="93.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Comments View Controller-->
         <scene sceneID="abs-EP-zyI">
             <objects>
-                <viewController id="tS9-uf-wiI" sceneMemberID="viewController">
+                <viewController id="tS9-uf-wiI" customClass="CommentsViewController" customModule="ShareItApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W6N-2f-OCq">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

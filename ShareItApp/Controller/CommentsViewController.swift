@@ -8,7 +8,11 @@
 import UIKit
 
 class CommentsViewController: UIViewController {
-
+//MARK: - Variables
+    
+    var post: Post!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

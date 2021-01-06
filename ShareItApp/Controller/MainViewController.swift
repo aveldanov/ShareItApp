@@ -84,6 +84,14 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "toComments", sender: posts[indexPath.row])
+    }
+    
+    
+    
+    
+    
     
     func setListener(){
         
