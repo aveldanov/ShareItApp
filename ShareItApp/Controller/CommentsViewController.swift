@@ -16,8 +16,7 @@ class CommentsViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var addCommentText: UITextField!
-    
-    
+    @IBOutlet weak var keyBoardView: UIView!
     
     
     

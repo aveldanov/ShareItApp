@@ -253,6 +253,7 @@
                     <navigationItem key="navigationItem" id="c0c-CJ-dEj"/>
                     <connections>
                         <outlet property="addCommentText" destination="AZn-wI-E0l" id="9f2-ga-QBR"/>
+                        <outlet property="keyBoardView" destination="jvG-XM-gGX" id="PbB-ia-O6e"/>
                         <outlet property="tableView" destination="sEA-Yx-3WL" id="lc2-Q4-iKL"/>
                     </connections>
                 </viewController>
