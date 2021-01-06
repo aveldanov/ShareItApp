@@ -61,7 +61,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     override func viewWillDisappear(_ animated: Bool) {
         // free up resources
-        
         if postListener != nil{
             postListener.remove()
 
