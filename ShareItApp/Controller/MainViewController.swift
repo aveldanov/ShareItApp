@@ -63,7 +63,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // free up resources
         if postListener != nil{
             postListener.remove()
-            
         }
     }
     
