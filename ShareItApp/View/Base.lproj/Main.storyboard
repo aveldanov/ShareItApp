@@ -207,6 +207,11 @@
                                                 <constraint firstItem="dn1-Ke-5wx" firstAttribute="leading" secondItem="BoC-Qi-exp" secondAttribute="trailing" constant="10" id="vss-xZ-bfl"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="commentLabel" destination="hyZ-aN-DTa" id="CnP-Ej-bRz"/>
+                                            <outlet property="timeStampLabel" destination="dn1-Ke-5wx" id="7qL-Dl-VQK"/>
+                                            <outlet property="userNameLabel" destination="BoC-Qi-exp" id="nVN-Vp-tg0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
