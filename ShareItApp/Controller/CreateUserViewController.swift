@@ -69,13 +69,10 @@ class CreateUserViewController: UIViewController {
                 }
             }
         }
-
-        
     }
+    
     @IBAction func cancelButtonTapped(_ sender: UIButton) {
         dismiss(animated: true, completion: nil)
     }
     
-    
-
 }
