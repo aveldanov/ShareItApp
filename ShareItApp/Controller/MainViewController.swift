@@ -53,7 +53,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
                 self.present(loginVC, animated: true, completion: nil)
             }else{
                 self.setListener()
-
+                
             }
         })
     }
@@ -63,7 +63,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         // free up resources
         if postListener != nil{
             postListener.remove()
-
+            
         }
     }
     
@@ -85,7 +85,7 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-
+    
     func setListener(){
         
         if selectedCategory == PostCategory.popular.rawValue{
@@ -139,10 +139,8 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
         do{
             try fireBaseAuth.signOut()
         }catch let signOutError as NSError{
-            
             debugPrint("Error Signing Out", signOutError)
         }
-        
     }
     
     
