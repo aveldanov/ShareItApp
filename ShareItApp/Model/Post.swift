@@ -50,7 +50,6 @@ class Post {
             
             posts.append(post)
         }
-        
         return posts
     }
     
