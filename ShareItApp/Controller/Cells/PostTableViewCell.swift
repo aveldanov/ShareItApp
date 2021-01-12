@@ -56,7 +56,6 @@ class PostTableViewCell: UITableViewCell {
         commentsNumberLabel.text = String(post.numberOfComments)
         
         
-        
         //        print("TIMESTAMP",post.timeStamp)
         let formatter = DateFormatter()
         formatter.dateFormat = "MMM d, hh:mm"
