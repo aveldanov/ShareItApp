@@ -67,7 +67,6 @@ class MainViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     
-    
     //MARK: - Data Source Methods
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
