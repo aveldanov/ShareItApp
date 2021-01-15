@@ -39,8 +39,6 @@ class CreateUserViewController: UIViewController {
         }
         
         
-        
-        
         Auth.auth().createUser(withEmail: email, password: password) { (authResult, error) in
             if let error = error{
                 debugPrint("Error creating user", error.localizedDescription)
