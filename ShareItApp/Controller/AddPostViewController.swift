@@ -40,7 +40,6 @@ class AddPostViewController: UIViewController, UITextViewDelegate {
     
     
     
-    
     @IBAction func postButtonClicked(_ sender: UIButton) {
         guard let userName = userNameTextField.text else {
             return
