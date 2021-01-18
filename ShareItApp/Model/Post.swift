@@ -32,7 +32,6 @@ class Post {
     class func parseData(snapshot: QuerySnapshot?)->[Post]{
         var posts = [Post]()
         
-        
         guard let snapshot = snapshot else {
             return posts
         }
