@@ -35,6 +35,7 @@ class Post {
         guard let snapshot = snapshot else {
             return posts
         }
+        
         for document in snapshot.documents{
             let data = document.data()
             let userName = data[USERNAME] as? String ?? "Anonymous"
