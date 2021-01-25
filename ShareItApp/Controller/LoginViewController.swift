@@ -17,8 +17,6 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var createUserButton: UIButton!
     
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         loginButton.layer.cornerRadius = 10
