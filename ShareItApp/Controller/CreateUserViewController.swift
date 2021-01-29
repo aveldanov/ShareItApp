@@ -20,7 +20,6 @@ class CreateUserViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
