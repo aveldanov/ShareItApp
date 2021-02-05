@@ -18,8 +18,6 @@ class CommentsViewController: UIViewController {
     @IBOutlet weak var addCommentText: UITextField!
     @IBOutlet weak var keyBoardView: UIView!
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 
